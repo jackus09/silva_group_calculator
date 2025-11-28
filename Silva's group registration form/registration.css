@@ -1,0 +1,21 @@
+.inputs {
+    background-color: pink;
+    padding: 200px;
+    border-radius: 50px;
+    position: absolute;
+    top: 30px;
+    left: 500px;
+
+    input{
+        font-size: 50px;
+        margin-top: 5px;
+    }
+}
+
+button {
+    margin-top: 5px;
+    font-size: 50px;
+    background-color: burlywood;
+    border-radius: 50px;
+
+}

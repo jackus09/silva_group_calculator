@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registration.css">
+
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <center>
+        <div class="inputs">
+            <h1>Register Now!</h1>
+
+            <input type="text" id="fname" placeholder="fname"><br>
+            <input type="text" id="mname" placeholder="mname"><br>
+            <input type="text" id="lname" placeholder="lname"><br>
+            <input type="text" id="contact" placeholder="contact"><br>
+            <input type="text" id="address" placeholder="address"><br>
+
+            <button id="submit"> Submit </button>
+        </div>
+    </center>
+
+    <script>
+        document.getElementById("submit").addEventListener("click", function () {
+            var fname = document.getElementById("fname").value;
+            var mname = document.getElementById("mname").value;
+            var lname = document.getElementById("lname").value;
+            var contact = document.getElementById("contact").value;
+            var address = document.getElementById("address").value;
+
+            if (fname === '' && mname === '' && lname === '' && contact === '' && address === '') {
+                alert("Please fill all the fields");
+            } else if (fname === "") {
+                alert("Please fill out First Name");
+            } else if (mname === "") {
+                alert("Please fill out Middle Name");
+            } else if (lname === "") {
+                alert("Please fill out Last Name");
+            } else if (contact === "") {
+                alert("Please fill out Contact");
+            } else if (address === "") {
+                alert("Please fill out Address");
+            } else {
+                alert("Registration successful");
+                document.getElementById("fname").value = "";
+                document.getElementById("mname").value = "";
+                document.getElementById("lname").value = "";
+                document.getElementById("contact").value = "";
+                document.getElementById("address").value = "";
+                alert("First Name: " + fname + "\n" + "Middle Name: " + mname + "\n" + "Last Name: " + lname + "\n" + "Contact: " + contact + "\n" + "Address: " + address + "\n" + "Registration Successful");
+            }
+
+
+        })
+    </script>
+</body>
+
+</html>
