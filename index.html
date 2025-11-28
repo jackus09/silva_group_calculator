@@ -68,10 +68,21 @@
             view.value = "Error!";
         }
     }
+    function perc(pc) {
+        if(ch === '%'){
+        try{
+            view.value = String(eval(view.value) / 100);
+        }catch(e){
+            view.value = "Error";
+        }
+        return;
+    }
+    }
 
     function clearView() {
         view.value = "";
     }
 </script>
+
 
 </html>
