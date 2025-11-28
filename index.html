@@ -1,0 +1,77 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Calculator
+    </title>
+</head>
+
+<body>
+    <ul>
+        <li>Silva, April John</li>
+        <li>Sernal, Paulo Emmanuel</li>
+        <li>Ejercito, Renan</li>
+        <li>Aninon, Kyle</li>
+        <li>Bulay, Jashtine</li>
+    </ul>
+
+    <center>
+
+        <div class="div">
+            <input type="text" id="viewvalue" value="" placeholder="0">
+
+            <br><br>
+
+            <input onclick="powerRangers('1')" type="button" value="1">
+            <input onclick="powerRangers('2')" type="button" value="2">
+            <input onclick="powerRangers('3')" type="button" value="3">
+            <input onclick="powerRangers('+')" type="button" value="+">
+            <br>
+
+            <input onclick="powerRangers('4')" type="button" value="4">
+            <input onclick="powerRangers('5')" type="button" value="5">
+            <input onclick="powerRangers('6')" type="button" value="6">
+            <input onclick="powerRangers('-')" type="button" value="-">
+            <br>
+
+            <input onclick="powerRangers('7')" type="button" value="7">
+            <input onclick="powerRangers('8')" type="button" value="8">
+            <input onclick="powerRangers('9')" type="button" value="9">
+            <input onclick="powerRangers('*')" type="button" value="*">
+            <br>
+
+            <input onclick="clearView()" type="button" value="C">
+            <input onclick="powerRangers('0')" type="button" value="0">
+            <input type="button" value="=" onclick="total()">
+            <input onclick="powerRangers('%')" type="button" value="%">
+            <br>
+        </div>
+
+    </center>
+
+
+
+</body>
+<script>
+    var view = document.getElementById('viewvalue');
+
+    function powerRangers(num) {
+        view.value += num;
+    }
+
+    function total() {
+        try {
+            view.value = eval(view.value)
+        } catch {
+            view.value = "Error!";
+        }
+    }
+
+    function clearView() {
+        view.value = "";
+    }
+</script>
+
+</html>
