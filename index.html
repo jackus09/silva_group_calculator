@@ -45,7 +45,6 @@
             <input onclick="clearView()" type="button" value="C">
             <input onclick="powerRangers('0')" type="button" value="0">
             <input type="button" value="=" onclick="total()">
-            <input onclick="powerRangers('%')" type="button" value="%">
             <br>
         </div>
 
@@ -68,16 +67,6 @@
             view.value = "Error!";
         }
     }
-    function perc(pc) {
-        if(ch === '%'){
-        try{
-            view.value = String(eval(view.value) / 100);
-        }catch(e){
-            view.value = "Error";
-        }
-        return;
-    }
-    }
 
     function clearView() {
         view.value = "";
@@ -86,3 +75,4 @@
 
 
 </html>
+
